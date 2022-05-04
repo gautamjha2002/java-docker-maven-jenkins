@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls -a"
-                sh "docker build /var/lib/jenkins/workspace/build-tomcat-docker-image/Dockerfile -t tomcatsamplewebapp:${env.BUILD_ID}"
+                sh "docker build -t tomcatsamplewebapp:${env.BUILD_ID} /var/lib/jenkins/workspace/build-tomcat-docker-image/Dockerfile"
             }
         }
 
